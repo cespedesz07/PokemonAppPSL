@@ -1,30 +1,22 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name pokemonApp2App
- * @description
- * # pokemonApp2App
- *
- * Main module of the application.
- */
-angular
-  .module('pokemonApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+var pokemonApp = angular.module('pokemonApp', [
+  'ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngRoute',
+  'ngSanitize',
+  'ngTouch',
+  'ngMaterial'
+]);
+
+pokemonApp.config( function($routeProvider){
+  $routeProvider
+    .when( '/', {
+      templateUrl: 'views/pokemonGrid/pokemonGrid.html',
+      controller: 'pokemonGridCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
