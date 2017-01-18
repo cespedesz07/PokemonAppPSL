@@ -1,6 +1,6 @@
 'use strict';
 
-pokemonApp.factory('pokemonGridService', ['$http', function($http){
+pokemonApp.factory('pokemonGridService', function($http){
   var pokemonGridService = {};
 
   var _getPokemons = function(){
@@ -35,4 +35,4 @@ pokemonApp.factory('pokemonGridService', ['$http', function($http){
   pokemonGridService.getPokemonImg = _getPokemonImg;
 
   return pokemonGridService;
-}]);
+});

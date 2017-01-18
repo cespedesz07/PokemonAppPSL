@@ -9,8 +9,15 @@ pokemonApp.controller('pokemonInfoDialogCtrl', ['$scope', '$mdToast', '$mdDialog
   $scope.isFilterActivated = false;
   //endregion
 
+  //region Functions
   $scope.closeDialog = function(){
     $mdDialog.cancel();
   };
+
+  $scope.toggleUnit = function(){
+    $scope.selectedUnit = $scope.isFilterActivated ? 'cm' : 'm';
+  };
   //endregion
+
+  $scope.toggleUnit();
 }]);
