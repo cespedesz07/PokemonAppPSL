@@ -6,6 +6,7 @@ pokemonApp.controller('pokemonInfoDialogCtrl', ['$scope', '$mdToast', '$mdDialog
 
   //region Definitions
   $scope.selectedPokemonInfo = selectedPokemonInfo;
+  $scope.isFilterActivated = false;
   //endregion
 
   $scope.closeDialog = function(){
