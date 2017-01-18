@@ -1,14 +1,19 @@
-<md-content class="md-padding" layout="row">
-  <div flex-xs="" flex-gt-xs="30" layout="row" layout-wrap>
-    <md-card ng-repeat="pokemonItem in pokemonsArray">
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">{{pokemonItem.name}}</span>
-        </md-card-title-text>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button class="md-primary">Info</md-button>
-      </md-card-actions>
-    </md-card>
-  </div>
-</md-content>
+<div>
+    <div layout="row" layout-wrap>
+        <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="pokemonItem in pokemonsArray">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline pokemon-name">{{pokemonItem.name}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <img ng-src="{{pokemonItem.img}}" class="md-card-image" alt="{{pokemonItem.name}}">
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-primary" ng-click="loadPokemonInfo(pokemonItem)">Info</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>
